@@ -234,18 +234,22 @@ Student.prototype.scope = function() {
   console.log(this);
 };
 
+
 // TODO: Uncomment the following line of code to see the output in the browser console
-console.log(joe.scope());
+// console.log(joe.scope());
+joe.scope();
 
 Student.prototype.scopeArrow = () => console.log(this);
+Student.prototype.scopeArrow = (that) => console.log(that);
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-console.log(joe.scopeArrow());
+// console.log(joe.scopeArrow());
+joe.scopeArrow();
 
 // TODO: Write a COMMENT below to answer the following questions.
 // 1. What is "this" when joe.scope() is invoked?
 // "This" is the student obejct with properties name, agea and hometown.
 // 2. What is "this" when joe.scopeArrow() is invoked?
-// "This" is  a window object with properties like postMessage, blur, focus...
+// "This" is the inhertied global window object (most global scope you can get) from our browser with properties like postMessage, blur, focus...
 // 3. Explain why "this" is different when an arrow function is used.
-// I have no idea. Need TA help on understanding this.
+// Fat arrow function just inherits whatever context it's in which is the global default object - the window browser in this instance. Fat arrow functions expect a return.
