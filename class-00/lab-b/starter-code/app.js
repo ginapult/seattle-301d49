@@ -7,7 +7,7 @@ const theOldWay = function(course) {
 };
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log('The old way:', theOldWay('Code 301'));
+console.log('The old way:', theOldWay('Code 301'));
 
 
 // STEP 2
@@ -18,7 +18,7 @@ const theNewWay = (course) => {
 };
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log('The new way:', theNewWay('Code 301'));
+console.log('The new way:', theNewWay('Code 301'));
 
 
 // STEP 3
@@ -28,17 +28,17 @@ const withoutParens = course => {
 };
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log('Without parens:', withoutParens('Code 301'));
+console.log('Without parens:', withoutParens('Code 301'));
 
 
 // STEP 4
 // If the code block contains a single line of code, we can write everything on one line
 // We no longer need the curly braces and the return is implicit
 // Without an arrow function, we need to explicitly type "return"
-const oneLiner = course => `I cam currently enrolled in ${course}`;
+const oneLiner = course => `I am currently enrolled in ${course}`;
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log('As a one-liner:', oneLiner('Code 301'));
+console.log('As a one-liner:', oneLiner('Code 301'));
 
 
 // STEP 5
@@ -49,7 +49,7 @@ const add = function(num1, num2) {
 };
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log('Let\'s do some math:', add(4, 5));
+console.log('Let\'s do some math:', add(4, 5));
 
 
 // STEP 6
@@ -58,7 +58,7 @@ const add = function(num1, num2) {
 const addOneLiner = (num1, num2) => `${num1} + ${num2} = ${num1 + num2}`;
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log('Add as a one-liner:', addOneLiner(4, 5));
+console.log('Add as a one-liner:', addOneLiner(4, 5));
 
 
 // STEP 7
@@ -70,7 +70,7 @@ const multiLiner = word => {
 };
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log('Multi-line arrow function:', multiLiner('hello'));
+console.log('Multi-line arrow function:', multiLiner('hello'));
 
 
 // STEP 8
@@ -85,7 +85,7 @@ const oldObject = function(array) {
 };
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log('Hello from the old object function', oldObject(['hi', 'hello', 'are you there?']));
+console.log('Hello from the old object function', oldObject(['hi', 'hello', 'are you there?']));
 
 
 // STEP 9
@@ -98,7 +98,7 @@ const newObject = array => ({
 });
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log('Hello from the new object function', newObject(['hi', 'hello', 'are you there?']));
+console.log('Hello from the new object function', newObject(['hi', 'hello', 'are you there?']));
 
 
 // STEP 10
@@ -113,8 +113,12 @@ let sum = function(a, b, c, d) {
 };
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(sum(1, 2, 3, 4));
+console.log(sum(1, 2, 3, 4));
 
+// gp - sum refactored
+const sumRefactored = (a, b, c, d) => `${a+b+c+d}`;
+console.log(sumRefactored(1, 2, 3, 4));
+////////////////////
 
 let objectLit = function() {
   return {
@@ -125,7 +129,16 @@ let objectLit = function() {
 };
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(objectLit());
+console.log(objectLit());
+
+// gp - objectLit refactored
+const objectLitRefactored = () => ({
+  key1: 'value1',
+  key2: 'value2',
+  key3: 'value3',
+});
+console.log(objectLitRefactored());
+////////////////////
 
 
 let sumAndProduct = function(a, b) {
@@ -135,7 +148,16 @@ let sumAndProduct = function(a, b) {
 };
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(sumAndProduct(3, 9));
+console.log(sumAndProduct(3, 9));
+
+// gp - sumAndProduct refactored
+const sumAndProductRefactored = (a, b) => {
+  sum = a + b;
+  const product = a * b;
+  return [sum, product];
+};
+console.log(sumAndProductRefactored(3, 9));
+////////////////////
 
 
 let message = function(name) {
@@ -143,8 +165,12 @@ let message = function(name) {
 };
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(message('Allie'));
+console.log(message('Allie'));
 
+// gp - message refactored
+const messageRefactored = (uname) => `Hello, ${uname}!`;
+console.log(messageRefactored('Allie'));
+////////////////////
 
 let Student = function(name, age, hometown) {
   this.name = name;
@@ -156,7 +182,17 @@ let joe = new Student('Joe', 'Schmoe', 100);
 
 // TODO: Uncomment the following line of code to see the output in the browser console
 // Note that the arrow function will cause this code to break!
-// console.log(joe);
+console.log(joe);
+
+// gp - message refactored
+// const StudenRefactored = (aname, age, hometown) => ({
+//   name = aname;
+//   age = age;
+//   hometown = hometown;
+// });
+// let joes = new StudentRefactored('joe', 'schmoe', 100);
+// console.log(joeS);
+////////////////////
 
 // TODO: After viewing the previous console.log(), return the code to a working state.
 
@@ -168,7 +204,12 @@ Student.prototype.greeting = function() {
 
 // TODO: Uncomment the following line of code to see the output in the browser console
 // Note that the arrow function will cause this method to break!
-// console.log(joe.greeting());
+console.log(joe.greeting());
+
+// gp - message refactored
+// Student.prototype.greeting = () => `Hi, my name is ${bname}`;
+// console.log(john.greeting());
+////////////////////
 
 // TODO: After viewing the previous console.log(), return the code to a working state.
 
@@ -179,8 +220,12 @@ Student.courseName = function() {
 };
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(Student.courseName());
+console.log(Student.courseName());
 
+// gp - student courseName refactored
+// Student.courseNameRefactored = () => `This student is enrolled in Code 301.`;
+// console.log(Student.CourseNameRefactored());
+////////////////////
 
 
 // STEP 11
@@ -189,18 +234,22 @@ Student.prototype.scope = function() {
   console.log(this);
 };
 
+
 // TODO: Uncomment the following line of code to see the output in the browser console
 // console.log(joe.scope());
+joe.scope();
 
 Student.prototype.scopeArrow = () => console.log(this);
+Student.prototype.scopeArrow = (that) => console.log(that);
 
 // TODO: Uncomment the following line of code to see the output in the browser console
 // console.log(joe.scopeArrow());
+joe.scopeArrow();
 
 // TODO: Write a COMMENT below to answer the following questions.
 // 1. What is "this" when joe.scope() is invoked?
-//
+// "This" is the student obejct with properties name, agea and hometown.
 // 2. What is "this" when joe.scopeArrow() is invoked?
-//
+// "This" is the inhertied global window object (most global scope you can get) from our browser with properties like postMessage, blur, focus...
 // 3. Explain why "this" is different when an arrow function is used.
-//
+// Fat arrow function just inherits whatever context it's in which is the global default object - the window browser in this instance. Fat arrow functions expect a return.
